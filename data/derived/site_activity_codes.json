@@ -1,0 +1,228 @@
+{
+ "Bedford (Edith Nourse Rogers Memorial Veterans Hospital)": [
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "I01",
+   153,
+   56.9
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "IK2",
+   47,
+   17.5
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "I21",
+   41,
+   15.2
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "I50",
+   17,
+   6.3
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "IP1",
+   5,
+   1.9
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "IK6",
+   4,
+   1.5
+  ],
+  [
+   "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+   "IS1",
+   2,
+   0.7
+  ]
+ ],
+ "Gainesville (Malcolm Randall VA Medical Center)": [
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "I01",
+   165,
+   55.7
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "I21",
+   60,
+   20.3
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "IK2",
+   45,
+   15.2
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "IK1",
+   12,
+   4.1
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "I50",
+   8,
+   2.7
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "IS1",
+   4,
+   1.4
+  ],
+  [
+   "VETERANS HEALTH ADMINISTRATION",
+   "IK6",
+   2,
+   0.7
+  ]
+ ],
+ "Minneapolis VA Health Care System": [
+  [
+   "CENTER FOR VETERANS RESEARCH AND EDUCATION",
+   "UG3",
+   1,
+   100.0
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "I01",
+   299,
+   71.4
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "I21",
+   48,
+   11.5
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "IK2",
+   48,
+   11.5
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "IS1",
+   10,
+   2.4
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "I50",
+   8,
+   1.9
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "IK1",
+   4,
+   1.0
+  ],
+  [
+   "MINNEAPOLIS VA MEDICAL CENTER",
+   "IK6",
+   2,
+   0.5
+  ]
+ ],
+ "Lexington VA Health Care System": [
+  [
+   "LEXINGTON BIOMEDICAL RESEARCH INSTITUTE",
+   "R01",
+   9,
+   100.0
+  ],
+  [
+   "VA MEDICAL CENTER LEXINGTON KY",
+   "I01",
+   109,
+   83.2
+  ],
+  [
+   "VA MEDICAL CENTER LEXINGTON KY",
+   "IK2",
+   10,
+   7.6
+  ],
+  [
+   "VA MEDICAL CENTER LEXINGTON KY",
+   "I21",
+   9,
+   6.9
+  ],
+  [
+   "VA MEDICAL CENTER LEXINGTON KY",
+   "IS1",
+   3,
+   2.3
+  ]
+ ],
+ "VA Pacific Islands Health Care System": [
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "U10",
+   5,
+   27.8
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "R01",
+   4,
+   22.2
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "N01",
+   2,
+   11.1
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "R03",
+   2,
+   11.1
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "R21",
+   2,
+   11.1
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "RF1",
+   2,
+   11.1
+  ],
+  [
+   "PACIFIC HEALTH RESEARCH EDUCATION INST",
+   "UF1",
+   1,
+   5.6
+  ],
+  [
+   "VA PACIFIC ISLANDS HEALTHCARE SYSTEM",
+   "I01",
+   6,
+   85.7
+  ],
+  [
+   "VA PACIFIC ISLANDS HEALTHCARE SYSTEM",
+   "I21",
+   1,
+   14.3
+  ]
+ ]
+}

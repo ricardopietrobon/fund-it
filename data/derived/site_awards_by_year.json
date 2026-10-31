@@ -1,0 +1,605 @@
+{
+ "Bedford (Edith Nourse Rogers Memorial Veterans Hospital)": {
+  "byyear": {
+   "2011": 8,
+   "2012": 2,
+   "2013": 15,
+   "2014": 7,
+   "2015": 21,
+   "2016": 7,
+   "2017": 11,
+   "2018": 18,
+   "2019": 29,
+   "2020": 35,
+   "2021": 34,
+   "2022": 23,
+   "2023": 23,
+   "2024": 36
+  },
+  "activity": [
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    32.0
+   ],
+   [
+    "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+    "I01",
+    153,
+    56.9
+   ],
+   [
+    "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+    "I21",
+    41,
+    15.2
+   ],
+   [
+    "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+    "IP1",
+    5,
+    1.9
+   ],
+   [
+    "EDITH NOURSE ROGERS MEMORIAL VETERANS HOSPITAL",
+    "IS1",
+    2,
+    0.7
+   ]
+  ]
+ },
+ "Gainesville (Malcolm Randall VA Medical Center)": {
+  "byyear": {
+   "2011": 7,
+   "2012": 11,
+   "2013": 14,
+   "2014": 29,
+   "2015": 40,
+   "2016": 23,
+   "2017": 18,
+   "2018": 23,
+   "2019": 19,
+   "2020": 25,
+   "2021": 24,
+   "2022": 23,
+   "2023": 19,
+   "2024": 21
+  },
+  "activity": [
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    33.0
+   ],
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    31.0
+   ],
+   [
+    "VETERANS HEALTH ADMINISTRATION",
+    "I01",
+    165,
+    55.7
+   ],
+   [
+    "VETERANS HEALTH ADMINISTRATION",
+    "IK2",
+    45,
+    15.2
+   ],
+   [
+    "VETERANS HEALTH ADMINISTRATION",
+    "I50",
+    8,
+    2.7
+   ],
+   [
+    "VETERANS HEALTH ADMINISTRATION",
+    "IK6",
+    2,
+    0.7
+   ]
+  ]
+ },
+ "Minneapolis VA Health Care System": {
+  "byyear": {
+   "2011": 11,
+   "2012": 17,
+   "2013": 23,
+   "2014": 29,
+   "2015": 39,
+   "2016": 30,
+   "2017": 22,
+   "2018": 28,
+   "2019": 32,
+   "2020": 41,
+   "2021": 36,
+   "2022": 36,
+   "2023": 33,
+   "2024": 43
+  },
+  "activity": [
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    25.0
+   ],
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    24.0
+   ],
+   [
+    "CENTER FOR VETERANS RESEARCH AND EDUCATION",
+    "UG3",
+    1,
+    100.0
+   ],
+   [
+    "MINNEAPOLIS VA MEDICAL CENTER",
+    "I21",
+    48,
+    11.5
+   ],
+   [
+    "MINNEAPOLIS VA MEDICAL CENTER",
+    "IS1",
+    10,
+    2.4
+   ],
+   [
+    "MINNEAPOLIS VA MEDICAL CENTER",
+    "IK1",
+    4,
+    1.0
+   ]
+  ]
+ },
+ "Lexington VA Health Care System": {
+  "byyear": {
+   "2011": 7,
+   "2012": 7,
+   "2013": 7,
+   "2014": 11,
+   "2015": 9,
+   "2016": 11,
+   "2017": 10,
+   "2018": 8,
+   "2019": 11,
+   "2020": 16,
+   "2021": 12,
+   "2022": 13,
+   "2023": 11,
+   "2024": 7
+  },
+  "activity": [
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    51.0
+   ],
+   [
+    "LEXINGTON",
+    "KY",
+    131,
+    96.0
+   ],
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    49.0
+   ],
+   [
+    "LEXINGTON BIOMEDICAL RESEARCH INSTITUTE",
+    "R01",
+    9,
+    100.0
+   ],
+   [
+    "VA MEDICAL CENTER LEXINGTON KY",
+    "IK2",
+    10,
+    7.6
+   ],
+   [
+    "VA MEDICAL CENTER LEXINGTON KY",
+    "IS1",
+    3,
+    2.3
+   ]
+  ]
+ },
+ "VA Pacific Islands Health Care System": {
+  "byyear": {
+   "2010": 6,
+   "2011": 3,
+   "2012": 1,
+   "2013": 2,
+   "2014": 2,
+   "2015": 2,
+   "2016": 1,
+   "2017": 1,
+   "2018": 1,
+   "2021": 2,
+   "2022": 1,
+   "2023": 2,
+   "2024": 1
+  },
+  "activity": [
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    88.0
+   ],
+   [
+    "CHARLESTON",
+    "SC",
+    621,
+    13.0
+   ],
+   [
+    "PITTSBURGH",
+    "PA",
+    604,
+    15.0
+   ],
+   [
+    "IOWA CITY",
+    "IA",
+    596,
+    16.0
+   ],
+   [
+    "DURHAM",
+    "NC",
+    586,
+    18.0
+   ],
+   [
+    "CHICAGO",
+    "IL",
+    574,
+    19.0
+   ],
+   [
+    "INDIANAPOLIS",
+    "IN",
+    518,
+    20.0
+   ],
+   [
+    "BRONX",
+    "NY",
+    502,
+    78.0
+   ],
+   [
+    "PACIFIC HEALTH RESEARCH EDUCATION INST",
+    "U10",
+    5,
+    27.8
+   ],
+   [
+    "PACIFIC HEALTH RESEARCH EDUCATION INST",
+    "N01",
+    2,
+    11.1
+   ],
+   [
+    "PACIFIC HEALTH RESEARCH EDUCATION INST",
+    "R21",
+    2,
+    11.1
+   ],
+   [
+    "PACIFIC HEALTH RESEARCH EDUCATION INST",
+    "UF1",
+    1,
+    5.6
+   ],
+   [
+    "VA PACIFIC ISLANDS HEALTHCARE SYSTEM",
+    "I21",
+    1,
+    14.3
+   ]
+  ]
+ }
+}

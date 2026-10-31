@@ -1,0 +1,184 @@
+[
+ {
+  "dept": "INTERNAL MEDICINE/MEDICINE",
+  "junior": 16978,
+  "senior": 3231,
+  "lag": -3,
+  "r": 0.473
+ },
+ {
+  "dept": "PUBLIC HEALTH & PREV MEDICINE",
+  "junior": 5986,
+  "senior": 881,
+  "lag": -5,
+  "r": 0.564
+ },
+ {
+  "dept": "PSYCHIATRY",
+  "junior": 4661,
+  "senior": 742,
+  "lag": -2,
+  "r": 0.577
+ },
+ {
+  "dept": "PEDIATRICS",
+  "junior": 4631,
+  "senior": 677,
+  "lag": -5,
+  "r": 0.569
+ },
+ {
+  "dept": "PATHOLOGY",
+  "junior": 3340,
+  "senior": 631,
+  "lag": -5,
+  "r": 0.382
+ },
+ {
+  "dept": "RADIATION-DIAGNOSTIC/ONCOLOGY",
+  "junior": 3040,
+  "senior": 357,
+  "lag": -2,
+  "r": 0.378
+ },
+ {
+  "dept": "NEUROLOGY",
+  "junior": 3003,
+  "senior": 631,
+  "lag": -3,
+  "r": 0.594
+ },
+ {
+  "dept": "OTHER HEALTH PROFESSIONS",
+  "junior": 2823,
+  "senior": 215,
+  "lag": -3,
+  "r": 0.558
+ },
+ {
+  "dept": "SURGERY",
+  "junior": 2368,
+  "senior": 301,
+  "lag": -5,
+  "r": 0.42
+ },
+ {
+  "dept": "DENTISTRY",
+  "junior": 1319,
+  "senior": 133,
+  "lag": -5,
+  "r": 0.426
+ },
+ {
+  "dept": "OPHTHALMOLOGY",
+  "junior": 1297,
+  "senior": 219,
+  "lag": 0,
+  "r": 0.092
+ },
+ {
+  "dept": "OBSTETRICS & GYNECOLOGY",
+  "junior": 1207,
+  "senior": 161,
+  "lag": -4,
+  "r": 0.198
+ },
+ {
+  "dept": "ANESTHESIOLOGY",
+  "junior": 997,
+  "senior": 140,
+  "lag": -5,
+  "r": 0.379
+ },
+ {
+  "dept": "NEUROSURGERY",
+  "junior": 941,
+  "senior": 132,
+  "lag": -5,
+  "r": 0.266
+ },
+ {
+  "dept": "OTOLARYNGOLOGY",
+  "junior": 822,
+  "senior": 136,
+  "lag": -5,
+  "r": 0.338
+ },
+ {
+  "dept": "FAMILY MEDICINE",
+  "junior": 698,
+  "senior": 90,
+  "lag": 0,
+  "r": 0.473
+ },
+ {
+  "dept": "ORTHOPEDICS",
+  "junior": 613,
+  "senior": 59,
+  "lag": -5,
+  "r": 0.342
+ },
+ {
+  "dept": "EMERGENCY MEDICINE",
+  "junior": 470,
+  "senior": 52,
+  "lag": -1,
+  "r": 0.299
+ },
+ {
+  "dept": "DERMATOLOGY",
+  "junior": 455,
+  "senior": 67,
+  "lag": 0,
+  "r": 0.325
+ },
+ {
+  "dept": "PHYSICAL MEDICINE & REHAB",
+  "junior": 405,
+  "senior": 36,
+  "lag": -1,
+  "r": 0.168
+ },
+ {
+  "dept": "UROLOGY",
+  "junior": 388,
+  "senior": 51,
+  "lag": -4,
+  "r": -0.142
+ },
+ {
+  "dept": "OTHER CLINICAL SCIENCES",
+  "junior": 128,
+  "senior": 26,
+  "lag": -4,
+  "r": 0.181
+ },
+ {
+  "dept": "PLASTIC SURGERY",
+  "junior": 11,
+  "senior": 0,
+  "lag": null,
+  "r": null
+ },
+ {
+  "dept": "NURSING DEPARTMENT",
+  "junior": 0,
+  "senior": 1,
+  "lag": 0,
+  "r": 0.0
+ },
+ {
+  "dept": "PUBLIC HEALTH",
+  "junior": 0,
+  "senior": 1,
+  "lag": 0,
+  "r": 0.0
+ },
+ {
+  "dept": "SCHOOL OF PUBLIC HEALTH",
+  "junior": 0,
+  "senior": 1,
+  "lag": 0,
+  "r": 0.0
+ }
+]
