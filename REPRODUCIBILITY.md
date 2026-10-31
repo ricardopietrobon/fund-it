@@ -10,6 +10,16 @@ script and no derived dataset accompanied the draft. Every number was carried as
 This repository supplies what was missing and records, honestly, what still cannot be
 regenerated.
 
+**On table numbers.** This audit was written against the draft that carried five tables. The
+manuscript has since moved to version 5, which carries four tables plus Figure 1 to fit
+Academic Medicine's five-display-item limit, and the rank-mobility table became Supplemental
+Digital Appendix 3. Where a table number below is ambiguous, the content is named too; the
+findings are about quantities, not positions.
+
+**On the two tracks.** `src/reproduce.py` checks the manuscript against the data it was
+written from and passes 79 of 79. The findings below come from checking that data against the
+public record, which is a different question. Both are kept; see README.md.
+
 ## Summary
 
 | Strand | Reported quantities | Status |
@@ -128,9 +138,11 @@ verified one.
 
 ## R-5 — Rank mobility and percentile ranks are not reproducible as specified
 
-Table 3's rank changes require organization rankings computed separately for FY2020 and
-FY2024. The available data is a single FY2020–2024 aggregate, so no rank change can be
-recovered from it.
+The rank-mobility table — the former Table 3, now Supplemental Digital Appendix 3 — reports
+rank changes that require organization rankings computed separately for FY2020 and FY2024.
+The available data is a single FY2020–2024 aggregate, so no rank change can be recovered from
+it. Moving the table to an appendix does not change this: an appendix carries the same
+evidentiary weight as a table for a reader trying to check it.
 
 The national percentile ranks in Table 4 (25th of 116, 33rd, 34th, 51st, 100th) are
 unreproducible by the manuscript's own account: "our per-site denominators varied between

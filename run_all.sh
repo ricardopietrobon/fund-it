@@ -1,18 +1,27 @@
 #!/usr/bin/env bash
-# Regenerate every reproducible quantity in the manuscript and check it against the draft.
+# Run both tracks: conformance against the manuscript, then verification against the source.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-echo "== Strand 2: concentration (offline, asserts all values) =="
+echo "############ CONFORMANCE TRACK ############"
+echo "Is the manuscript internally consistent with the data it was written from?"
+echo
+python src/reproduce.py
+
+echo
+echo "############ SOURCE VERIFICATION TRACK ############"
+echo
+echo "== Concentration statistics (offline, asserts all 25 values) =="
 python scripts/02_concentration.py
 
 echo
-echo "== Strand 1: cross-correlation audit (offline, asserts all aggregates) =="
+echo "== Strand 1 cross-correlation audit (offline, asserts all aggregates) =="
 python scripts/03_h1_audit.py
 
 echo
-echo "== Table 4: five sites, regenerated from the live NIH RePORTER API =="
+echo "== Five sites, regenerated from the live NIH RePORTER API =="
 python scripts/01_site_profiles.py
 
 echo
-echo "Outputs written to outputs/. See REPRODUCIBILITY.md for the three known discrepancies."
+echo "Outputs in outputs/. The three growth-ratio divergences above are expected and"
+echo "documented: see REPRODUCIBILITY.md finding R-3."
