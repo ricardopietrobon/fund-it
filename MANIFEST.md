@@ -16,7 +16,7 @@ overwriting each other, follow these rules.
 
 | Track | Owns | Status | Date |
 |---|---|---|---|
-| Conformance (session f1621013) | `src/reproduce.py`, `data/*.csv`, `data/references_pubmed_verified.json`, `figures/*`, `docs/PROVENANCE.md` | complete, 79 checks passing | 2026-10-31 |
+| Conformance (session f1621013) | `src/reproduce.py`, `data/*.csv`, `data/references_pubmed_verified.json`, `figures/*`, `docs/PROVENANCE.md` | complete, 86 checks passing; synced to manuscript v6 on 2026-11-05 | 2026-11-05 |
 | Source verification (session 74e37c7b) | `scripts/*`, `data/derived/*`, `qualitative/*`, `REPRODUCIBILITY.md`, `COORDINATION.md`, `environment.yml`, `run_all.sh` | complete; 3 documented divergences from the published growth ratios | 2026-10-31 |
 
 The two tracks ask different questions and are both kept. Conformance checks the manuscript
@@ -33,6 +33,8 @@ python src/reproduce.py   # conformance only; exit 0 means every published numbe
 Run this after any merge. A failing check in `src/reproduce.py` means a data file and the
 manuscript have diverged, and the divergence should be resolved before anything else is added.
 
-The three growth-ratio divergences that `scripts/01_site_profiles.py` reports are **expected**
-and documented (REPRODUCIBILITY.md R-3). They are not a merge failure, and `src/reproduce.py`
-must not be edited to hide them.
+The three growth-ratio divergences R-3 reported were **resolved on 2026-11-05**: the manuscript
+adopted the facility-only values and `src/reproduce.py` was updated in step, as R-3 required.
+See "R-3 resolved" at the end of REPRODUCIBILITY.md. `scripts/01_site_profiles.py` should now
+agree with the published values; a fresh divergence is a real finding, not an expected one, and
+`src/reproduce.py` must still never be edited to hide one.
