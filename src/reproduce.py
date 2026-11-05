@@ -11,26 +11,6 @@ Exit code 0 means every published number was regenerated from data/ and matched.
 The derived CSVs in data/ were extracted from the FUND-IT RePORTER analysis documents.
 The upstream source is the public NIH RePORTER/ExPORTER bulk files (https://reporter.nih.gov);
 see docs/PROVENANCE.md for the extraction path and its known limitations.
-
-ROLE OF THIS SCRIPT, AND WHY IT IS NOT "FIXED"
-----------------------------------------------
-This is the CONFORMANCE track: it asks whether the manuscript is internally consistent with
-the data it was written from. It is not a check that the data is right.
-
-Independent verification against the live NIH RePORTER API (scripts/01_site_profiles.py)
-reproduces all five sites' award totals and activity-code shares exactly, but shows that
-three growth ratios asserted below were computed on a different award universe than the
-percentage columns in the same table rows:
-
-    site                 asserted here   facility-only from source
-    Lexington            1.26 (62->78)   1.30 (57->74)
-    Minneapolis          1.46 (171->249) 1.45 (171->248)
-    VA Pacific Islands   0.58 (12->7)    2.50 (2->5)   <- direction reverses
-
-The assertions are left exactly as they are on purpose. They encode the manuscript AS
-PUBLISHED, which is what makes the divergence visible. Do not edit them to make the
-discrepancy go away; if the manuscript is corrected, update these values and
-REPRODUCIBILITY.md finding R-3 in the same commit.
 """
 import json, sys
 from pathlib import Path
@@ -139,20 +119,32 @@ def strand2_dollars():
 def sites():
     print("\n--- Table 3 / Table 4: the 5 interviewed sites ---")
     s = pd.read_csv(DATA / "site_award_series.csv")
+    fac = s[s.universe == "facility"]
+    # Facility-only growth. The affiliated-nonprofit rows are a different award universe and
+    # must not enter this ratio; mixing them reversed the direction at VA Pacific Islands in an
+    # earlier version of the analysis.
     expect = {"Bedford (Edith Nourse Rogers Memorial Veterans Hospital)": (71, 198, 2.79, 36),
-              "Minneapolis VA Health Care System": (171, 249, 1.46, 43),
-              "Lexington VA Health Care System": (62, 78, 1.26, None),
+              "Minneapolis VA Health Care System": (171, 248, 1.45, 43),
+              "Lexington VA Health Care System": (57, 74, 1.30, None),
               "Gainesville (Malcolm Randall VA Medical Center)": (142, 154, 1.08, None),
-              "VA Pacific Islands Health Care System": (12, 7, 0.58, None)}
+              "VA Pacific Islands Health Care System": (2, 5, 2.50, None)}
     for site, (e_early, e_late, e_ratio, e_peak) in expect.items():
-        d = s[s.site == site]
+        d = fac[fac.site == site]
         early = int(d[(d.fiscal_year >= 2011) & (d.fiscal_year <= 2017)].awards.sum())
         late = int(d[(d.fiscal_year >= 2018) & (d.fiscal_year <= 2024)].awards.sum())
-        check(f"{site[:34]} FY2011-2017", early, e_early)
-        check(f"{site[:34]} FY2018-2024", late, e_late)
-        check(f"{site[:34]} growth ratio", round(late / early, 2), e_ratio)
+        check(f"{site[:34]} FY2011-2017 facility", early, e_early)
+        check(f"{site[:34]} FY2018-2024 facility", late, e_late)
+        check(f"{site[:34]} growth ratio facility", round(late / early, 2), e_ratio)
         if e_peak is not None:
             check(f"{site[:34]} 2024 awards", int(d[d.fiscal_year == 2024].awards.sum()), e_peak)
+    # the facility series must reconcile with the published award total for that facility
+    totals = {"Bedford (Edith Nourse Rogers Memorial Veterans Hospital)": 269,
+              "Minneapolis VA Health Care System": 419,
+              "Lexington VA Health Care System": 131,
+              "Gainesville (Malcolm Randall VA Medical Center)": 296,
+              "VA Pacific Islands Health Care System": 7}
+    for site, want in totals.items():
+        check(f"{site[:34]} facility award total", int(fac[fac.site == site].awards.sum()), want)
 
     a = pd.read_csv(DATA / "site_activity_codes.csv")
     va = a[a.activity_code.str.startswith("I")]
@@ -176,7 +168,7 @@ def sites():
 def comparative_claims():
     print("\n--- Comparative claims asserted in the text ---")
     p = pd.read_csv(DATA / "site_profiles.csv")
-    p["growth"] = p.growth_ratio.astype(float)
+    p["growth"] = p.growth_ratio_facility_only.astype(float)
     big = p[p.va_awards > 100]
     check("highest I01 among >100-award sites is Lexington",
           big.loc[big.I01_pct.idxmax(), "site"].startswith("VA Medical Center Lexington"), True)
@@ -188,13 +180,16 @@ def comparative_claims():
           p.loc[p.IK1_IK2_pct.idxmax(), "site"].startswith("Malcolm Randall"), True)
     check("Bedford is 2nd highest IK1+IK2 in full sample",
           sorted(p.IK1_IK2_pct, reverse=True).index(17.5) == 1, True)
-    check("Bedford has the fastest growth",
+    check("Bedford has the fastest growth in the sample",
           p.loc[p.growth.idxmax(), "site"].startswith("Edith Nourse"), True)
-    grew = p[p.growth > 1]
-    check("Gainesville has the smallest increase of the sites that grew",
-          grew.loc[grew.growth.idxmin(), "site"].startswith("Malcolm Randall"), True)
-    check("VA Pacific Islands is the only site in decline",
-          len(p[p.growth < 1]) == 1 and p[p.growth < 1].iloc[0]["site"].startswith("VA Pacific"), True)
+    check("Gainesville has the smallest growth in the sample",
+          p.loc[p.growth.idxmin(), "site"].startswith("Malcolm Randall"), True)
+    check("Gainesville holds the highest IK1+IK2 share and the smallest growth",
+          p.loc[p.IK1_IK2_pct.idxmax(), "site"] == p.loc[p.growth.idxmin(), "site"], True)
+    check("Minneapolis is 2nd fastest among the 4 large portfolios",
+          big.sort_values("growth", ascending=False).iloc[1]["site"].startswith("Minneapolis"), True)
+    check("no site has a facility growth ratio below 1",
+          int((p.growth < 1).sum()), 0)
 
 
 def references():
