@@ -175,3 +175,34 @@ Results ¶2 reads "a distribution in which the mean exceeds the third of the med
 (mean 126.6, median 74.0, Q3 207.5). The sentence is garbled; the intended comparison
 appears to be that the mean (126.6) exceeds the median (74.0) by roughly 70%, which is the
 signature of right skew. Flagged here because it was found during numeric verification.
+
+
+---
+
+## R-3 resolved, 2026-11-05
+
+The manuscript was corrected. Manuscript version 6 reports facility-only growth ratios for
+every site: Bedford 2.79, VA Pacific Islands 2.50, Minneapolis 1.45, Lexington 1.30,
+Gainesville 1.08. The sentence that rested on the 0.58 ratio is gone; no site is described as
+being in decline, and the Limitations section now names the mixed-universe error and its effect
+on VA Pacific Islands.
+
+The conformance track (`src/reproduce.py`, `data/site_profiles.csv`,
+`data/site_award_series.csv`) has been updated to match, as R-3 and MANIFEST.md require. It now
+runs 86 checks instead of 79. `data/site_award_series.csv` carries an explicit `universe` column
+(`facility` or `affiliated_nonprofit`), and a new assertion requires each facility series to sum
+to that facility's published award total, which is the check that would have caught the original
+defect.
+
+R-3's analysis above is kept unedited as the record of how the error was found. Two points from
+it remain open and belong to the authors, not to this repository:
+
+1. R-3 recommends reporting no growth ratio at all for VA Pacific Islands rather than 2.50 on a
+   2-to-5 series. The manuscript reports 2.50 and marks it as too small a base to interpret, in
+   the table note, the Results text and the joint display. Either treatment is defensible; the
+   authors should pick one.
+2. R-4 (Strand 1 not recomputable) is now disclosed in the manuscript. The Method states the
+   organization-name matching rules and the activity-code rule, and the Limitations state that
+   the annual investigator series were not retained, that investigator resolution, multi-PI cost
+   division and detrending were not fixed in advance, and that Table 1 should be read as a
+   reported rather than an independently verified result.
