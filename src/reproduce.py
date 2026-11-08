@@ -1,7 +1,7 @@
 """
 Reproduce every quantitative claim in:
 
-  Pietrobon R, Machiavelli A, Teixeira L, Kuo PC.
+  Pietrobon R, Machiavelli A, Teixeira L, Lindenberg A, Kuo PC.
   Concentration at the Top, Development at the Base: A Convergent Mixed-Methods Study of
   Federal Research Funding in Clinical Departments and Veterans Affairs Medical Centers.
 
@@ -192,6 +192,59 @@ def comparative_claims():
           int((p.growth < 1).sum()), 0)
 
 
+def strand3():
+    print("\n--- Results: topical depth across clinical departments (hypothesis 3) ---")
+    r = json.load(open(DATA / "h3_results.json"))
+    S = pd.read_csv(DATA / "h3_dept_specialization.csv")
+    check("topic-model corpus (awards)", int(r["n_documents"]), 122896)
+    check("topics in the fitted model", int(r["k_topics"]), 40)
+    check("department categories modeled", int(r["n_departments"]), 23)
+    check("modeled departments present in the table", len(S), 23)
+    check("vocabulary terms", int(r["vocab"]), 10449)
+    check("departments in the top-funded quartile", int(r["n_top"]), 6)
+    check("remaining departments", int(r["n_avg"]), 17)
+    check("median normalized entropy, top quartile", round(r["entropy_norm_top_median"], 3), 0.888)
+    check("median normalized entropy, remainder", round(r["entropy_norm_avg_median"], 3), 0.879)
+    check("entropy comparison P value", round(r["entropy_norm_p"], 2), 0.23)
+    check("median HHI, top quartile", round(r["hhi_top_median"], 4), 0.0495)
+    check("median HHI, remainder", round(r["hhi_avg_median"], 4), 0.0535)
+    check("HHI comparison P value", round(r["hhi_p"], 2), 0.16)
+    check("Spearman rho, HHI vs total funding", round(r["spearman_hhi_funding_rho"], 2), -0.37)
+    check("HHI P value in the robust regression", round(r["ols"]["pvalues"]["hhi"], 2), 0.41)
+    check("top-funded quartile is broader, not deeper",
+          r["entropy_norm_top_median"] > r["entropy_norm_avg_median"], True)
+
+    d = S.set_index("department")
+    for name, ent in [("PEDIATRICS", 0.962), ("INTERNAL MEDICINE/MEDICINE", 0.950),
+                      ("SURGERY", 0.934), ("FAMILY MEDICINE", 0.801),
+                      ("PSYCHIATRY", 0.835), ("EMERGENCY MEDICINE", 0.837)]:
+        check(f"normalized entropy, {name.lower()}", round(float(d.loc[name, "entropy_norm"]), 3), ent)
+
+    # The Results say breadth tracks size ONLY WEAKLY. Manuscript v13 briefly
+    # claimed the three broadest portfolios were the three largest departments;
+    # they are not, and psychiatry is the counterexample. These two checks exist
+    # so that claim cannot come back unnoticed.
+    from scipy.stats import spearmanr
+    big = S[S.n_projects >= 100]
+    rho = spearmanr(big.n_projects, big.entropy_norm).statistic
+    check("breadth vs department size, rho (>=100 awards)", round(float(rho), 2), 0.27)
+    broadest = set(S.nlargest(3, "entropy_norm").department)
+    largest = set(S.nlargest(3, "n_projects").department)
+    check("the three broadest are NOT the three largest", broadest == largest, False)
+    check("psychiatry is 3rd largest by award count",
+          S.nlargest(3, "n_projects").department.iloc[2], "PSYCHIATRY")
+    check("psychiatry is among the narrowest despite its size",
+          float(d.loc["PSYCHIATRY", "entropy_norm"]) < 0.85, True)
+    check("surgery is outside the three largest",
+          "SURGERY" in largest, False)
+
+    t = pd.read_csv(DATA / "h3_topics.csv")
+    check("topics listed with their terms", len(t), 40)
+    tune = pd.read_csv(DATA / "h3_tuning.csv")
+    check("topic-number candidates evaluated", len(tune), 7)
+    check("tuning selected 40 topics", int(tune.loc[tune.score.idxmax(), "k"]), 40)
+
+
 def references():
     print("\n--- References ---")
     r = json.load(open(DATA / "references_pubmed_verified.json"))
@@ -203,7 +256,7 @@ def references():
 
 
 if __name__ == "__main__":
-    strand1(); strand2_awards(); strand2_dollars(); sites(); comparative_claims(); references()
+    strand1(); strand2_awards(); strand2_dollars(); sites(); comparative_claims(); strand3(); references()
     print("\n" + "=" * 86)
     if FAIL:
         print(f"{len(FAIL)} CHECK(S) FAILED:")
