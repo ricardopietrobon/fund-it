@@ -1,0 +1,37 @@
+{
+  "k_topics": 40,
+  "n_departments": 23,
+  "n_documents": 122896,
+  "vocab": 10449,
+  "top_cut_usd": 3486286266.0,
+  "n_top": 6,
+  "n_avg": 17,
+  "entropy_norm_top_median": 0.8880248428447068,
+  "entropy_norm_avg_median": 0.8785604181204747,
+  "entropy_norm_U": 69.0,
+  "entropy_norm_p": 0.2272677741785293,
+  "entropy_norm_shapiro_p": 0.0018137335230619268,
+  "hhi_top_median": 0.049452831291101916,
+  "hhi_avg_median": 0.053518871019364096,
+  "hhi_U": 30.0,
+  "hhi_p": 0.15509128552606813,
+  "hhi_shapiro_p": 2.761366520242543e-05,
+  "spearman_hhi_funding_rho": -0.37154150197628455,
+  "spearman_hhi_funding_p": 0.08088157371504434,
+  "ols": {
+    "n": 23,
+    "r2": 0.9975673209656433,
+    "params": {
+      "const": 12.603576471273463,
+      "hhi": -2.422893190443773,
+      "log_n_projects": 0.9901965486794295,
+      "funding_per_pi_musd": 0.3505269989857966
+    },
+    "pvalues": {
+      "const": 0.0,
+      "hhi": 0.40981562114499603,
+      "log_n_projects": 2.6210908636205074e-133,
+      "funding_per_pi_musd": 0.0006437279371037288
+    }
+  }
+}
