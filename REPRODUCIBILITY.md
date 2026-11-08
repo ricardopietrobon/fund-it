@@ -206,3 +206,22 @@ it remain open and belong to the authors, not to this repository:
    the annual investigator series were not retained, that investigator resolution, multi-PI cost
    division and detrending were not fixed in advance, and that Table 1 should be read as a
    reported rather than an independently verified result.
+
+
+## R-5 opened and closed, 2026-11-09: hypothesis 3
+
+Until 2026-11-09 the manuscript reported hypothesis 3 as not completed, while the data
+availability statement claimed the repository regenerates every number in the report. Once the
+topic model was run and written into the manuscript, that statement was false for the duration
+between the two events: the H3 numbers existed in the paper and not in this repository.
+
+Closed by adding `scripts/04_h3_topic_model.py`, `scripts/05_fetch_abstracts.py` and the four
+`data/h3_*` files, and by extending `src/reproduce.py` from 86 to 116 checks. A clean clone now
+runs `python src/reproduce.py` to exit 0 with every H3 statistic in the Results regenerated from
+`data/`.
+
+Note on scope, so the claim is not overread. These are CONFORMANCE checks: they verify that the
+manuscript matches the derived files. They do not refit the topic model. An LDA fit is stochastic
+and depends on the sklearn version; `scripts/04_h3_topic_model.py` pins the seed (20261106) and
+records the tuning grid, but an independent refit on a fresh RePORTER pull should be expected to
+move the third decimal, not to reproduce it bit for bit.
